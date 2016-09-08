@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const packageData = require('./package.json');
-const filename = [packageData.name, packageData.version, 'js'];
+// const filename = [packageData.name, packageData.version, 'js'];
 
 
 module.exports = {
   entry:
     {
-      'react': './react/index.js'
+      'react': './client/client.js'
     },
   output: {
     path: path.resolve(__dirname, 'public'),
