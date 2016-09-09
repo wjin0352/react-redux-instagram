@@ -11,14 +11,19 @@ import AllPhotos from './components/AllPhotos';
 
 //  import react router
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+// history is from store.js where we synced the browserhistory with the store and exported it as history.
+import store, { history } from './store';
 
 const router = (
-  <Router history={browserHistory} >
-    <Route path='/' component={Main}>
-      <IndexRoute component={AllPhotos}></IndexRoute>
-      <Route path="/view/:postId" component={Single}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={history} >
+      <Route path='/' component={Main}>
+        <IndexRoute component={AllPhotos}></IndexRoute>
+        <Route path="/view/:postId" component={Single}></Route>
+      </Route>
+    </Router>
+  </Provider>
 )
 
 render(router, document.getElementById('app'));

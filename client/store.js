@@ -11,7 +11,7 @@ import posts from './data/posts';
 
 // create object for default data
 const defaultState = {
-  posts: posts
+  posts: posts,
   comments: comments
 };
 
@@ -20,4 +20,4 @@ const store = createStore(rootReducer, defaultState);
 // stores the browserHistory into the syncHistory
 export const history = syncHistoryWithStore(browserHistory, store);
 
-export store;
+export default store;
