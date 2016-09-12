@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Photo from './Photo';
 
 const AllPhotos = React.createClass({
   render() {
     return (
-      <div>
-      All photos
+      <div className='all-photos'>
+        {this.props.posts.map((post, idx) => <Photo {...this.props} key={idx} idx={idx} post={post} />)}
       </div>
     )
   }

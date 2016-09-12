@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // import css through webpack
-// import css from '../client/css/styles';
+import css from './css/styles.css';
 
 // import components
-import Main from './components/Main';
+import App from './components/App';
 import Single from './components/Single';
 import AllPhotos from './components/AllPhotos';
 
@@ -18,7 +18,7 @@ import store, { history } from './store';
 const router = (
   <Provider store={store}>
     <Router history={history} >
-      <Route path='/' component={Main}>
+      <Route path='/' component={App}>
         <IndexRoute component={AllPhotos}></IndexRoute>
         <Route path="/view/:postId" component={Single}></Route>
       </Route>

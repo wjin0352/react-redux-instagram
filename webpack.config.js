@@ -22,8 +22,14 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react'],
+          plugins: ["transform-object-rest-spread"]
         }
+      },
+      {
+        test: /\.css$/,
+        include: path.join(__dirname, 'client/css'),
+        loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
   },
