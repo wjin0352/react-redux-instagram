@@ -5,9 +5,10 @@ const Main = React.createClass({
   render() {
     return (
       <div>
-        <h1>
+        <h1 id='title'>
           <Link to='/'>Instagram</Link>
         </h1>
+        <hr/>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     )
