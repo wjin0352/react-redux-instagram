@@ -2,6 +2,11 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  overflow-y: scroll;
+  background-color: offwhite;
+}
+
 /* MAIN component */
   #title {
     color: red;
@@ -61,7 +66,19 @@ html {
     margin: .5em;
   }
 
-  body {
-    overflow-y: scroll;
-    background-color: #fafafa;
-  }
+/* SINGLE PHOTO */
+
+.single-photo {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.comment-div {
+  float:right;
+  margin-right: 380px;
+  font-size: .9em;
+}
+
+button.remove-content {
+  margin-left:7px;
+}

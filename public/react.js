@@ -21510,7 +21510,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  width: 500px;\n  display: block;\n  margin: 50px auto;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n#title a {\n  padding-left: 25%;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 1200px;\n  margin: 45px auto;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n  width: 21%;\n}\n.grid-photo-wrap {\n  max-width: 30%;\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\nbody {\n  overflow-y: scroll;\n  background-color: #fafafa;\n}\n", ""]);
+	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  width: 500px;\n  display: block;\n  margin: 50px auto;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n#title a {\n  padding-left: 25%;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 1200px;\n  margin: 45px auto;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n  width: 21%;\n}\n.grid-photo-wrap {\n  max-width: 30%;\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  width: 1000px;\n  margin: 0 auto;\n}\n.comment-div {\n  float: right;\n  margin-right: 380px;\n  font-size: 0.9em;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n", ""]);
 	
 	// exports
 
@@ -30116,7 +30116,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'comment' },
+	      { className: 'comment-div' },
 	      this.props.postComments.map(this.renderComment),
 	      _react2.default.createElement(
 	        'form',
