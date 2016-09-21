@@ -6,7 +6,7 @@ const Main = React.createClass({
     return (
       <div>
         <h1 id='title'>
-          <Link to='/'>Instagram</Link>
+          <Link to='/'>My Photos</Link>
         </h1>
         <hr/>
         {React.cloneElement({...this.props}.children, {...this.props})}
