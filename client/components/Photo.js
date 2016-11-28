@@ -15,7 +15,6 @@ const Photo = React.createClass({
 
           <CSSTransitionGroup transitionName='like' transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <span key={post.likes} className='likes-heart'>
-
             </span>
           </CSSTransitionGroup>
         </div>
@@ -27,7 +26,7 @@ const Photo = React.createClass({
               <Link className='button' to={`/view/${post.code}`}>
                 <span className='comment-count'>
                   <span className='speech-bubble' ></span>
-                  {comments[post.code] ? comments[post.code].length : 0 }
+                  {comments[post.code] ? comments[post.code].length : 0 } comments
                 </span>
               </Link>
             </div>

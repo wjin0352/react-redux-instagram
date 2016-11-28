@@ -5,7 +5,7 @@ const Comments = React.createClass({
     return (
       <div className='comment' key={idx} >
         <p>
-          <strong>{comment.user}</strong>
+          <strong>{`${comment.user} says: `}</strong>
           {comment.text}
           <button className='remove-content' onClick={this.props.removeComment.bind(null, this.props.params.postId, idx)}>&times;</button>
         </p>
@@ -28,12 +28,12 @@ const Comments = React.createClass({
   render() {
     return (
       <div className='comment-div'>
-        {this.props.postComments.map(this.renderComment)}
         <form ref='commentForm' className='comment-form' onSubmit={this.handleSubmit}>
           <input type='text' ref='author' placeholder='author' />
           <input type='text' ref='comment' placeholder='comment' />
           <input type='submit' hidden />
         </form>
+        {this.props.postComments.map(this.renderComment)}
       </div>
     )
   }

@@ -21510,7 +21510,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  width: 500px;\n  display: block;\n  margin: 50px auto;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n#title a {\n  padding-left: 25%;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 1200px;\n  margin: 45px auto;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n  width: 21%;\n}\n.grid-photo-wrap {\n  max-width: 30%;\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  width: 1000px;\n  margin: 0 auto;\n}\n.comment-div {\n  float: right;\n  margin-right: 380px;\n  font-size: 0.9em;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n", ""]);
+	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  display: block;\n  margin: 50px auto;\n  text-align: center;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 100%;\n  margin: 2em auto;\n  text-align: center;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n}\n.grid-photo-wrap {\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  text-align: center;\n}\n.comment-div {\n  font-size: 0.9em;\n  display: inline-block;\n  padding: 1em 1em;\n}\n.comment-form {\n  display: inline-block;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n", ""]);
 	
 	// exports
 
@@ -29215,7 +29215,8 @@
 	              'span',
 	              { className: 'comment-count' },
 	              _react2.default.createElement('span', { className: 'speech-bubble' }),
-	              comments[post.code] ? comments[post.code].length : 0
+	              comments[post.code] ? comments[post.code].length : 0,
+	              ' comments'
 	            )
 	          )
 	        )
@@ -30090,7 +30091,7 @@
 	        _react2.default.createElement(
 	          'strong',
 	          null,
-	          comment.user
+	          comment.user + ' says: '
 	        ),
 	        comment.text,
 	        _react2.default.createElement(
@@ -30119,14 +30120,14 @@
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'comment-div' },
-	      this.props.postComments.map(this.renderComment),
 	      _react2.default.createElement(
 	        'form',
 	        { ref: 'commentForm', className: 'comment-form', onSubmit: this.handleSubmit },
 	        _react2.default.createElement('input', { type: 'text', ref: 'author', placeholder: 'author' }),
 	        _react2.default.createElement('input', { type: 'text', ref: 'comment', placeholder: 'comment' }),
 	        _react2.default.createElement('input', { type: 'submit', hidden: true })
-	      )
+	      ),
+	      this.props.postComments.map(this.renderComment)
 	    );
 	  }
 	});

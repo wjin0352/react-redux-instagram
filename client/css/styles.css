@@ -10,9 +10,9 @@ body {
 /* MAIN component */
   #title {
     color: red;
-    width: 500px;
     display: block;
     margin:50px auto;
+    text-align: center;
     a {
       text-decoration: none;
       font-size: 40px;
@@ -20,14 +20,11 @@ body {
     }
   }
 
-  #title a {
-    padding-left: 25%;
-  }
-
 /* ALLPHOTOS */
   .all-photos {
-    max-width: 1200px;
-    margin: 45px auto;
+    max-width: 100%;
+    margin: 2em auto;
+    text-align: center;
   }
 
 
@@ -38,13 +35,10 @@ body {
 
   .grid-figure {
     display: inline-block;
-    width:21%;
   }
 
   .grid-photo-wrap {
-    max-width: 30%;
     display: inline-block;
-
   }
 
   .grid-photo {
@@ -69,14 +63,17 @@ body {
 /* SINGLE PHOTO */
 
 .single-photo {
-  width: 1000px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .comment-div {
-  float:right;
-  margin-right: 380px;
   font-size: .9em;
+  display: inline-block;
+  padding: 1em 1em;
+}
+
+.comment-form {
+  display: inline-block;
 }
 
 button.remove-content {
