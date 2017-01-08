@@ -7,7 +7,10 @@ router.get('*',function(req, res) {
   res.sendFile(path.join(__dirname, './public/index'));
 });
 
-app.listen(8000, function(err) {
+// included process.env PORT variable for herokus specific port needed to deploy
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, function(err) {
   if (err) {
     console.log(err);
     return;
