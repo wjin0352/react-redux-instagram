@@ -21510,7 +21510,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  display: block;\n  margin: 50px auto;\n  text-align: center;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 100%;\n  margin: 2em auto;\n  text-align: center;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n}\n.grid-photo-wrap {\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  text-align: center;\n}\n.comment-div {\n  font-size: 0.9em;\n  display: inline-block;\n  padding: 1em 1em;\n}\n.comment-form {\n  display: inline-block;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n", ""]);
+	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  display: block;\n  margin: 50px auto;\n  text-align: center;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 100%;\n  margin: 2em auto;\n  text-align: center;\n}\n/* INTRO paragraph */\n#intro {\n  width: 30%;\n  margin: 0 auto;\n  text-align: center;\n  padding-top: 5em;\n  padding-bottom: 5em;\n  font-family: monospace;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n}\n.grid-photo-wrap {\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  text-align: center;\n}\n.comment-div {\n  font-size: 0.9em;\n  display: inline-block;\n  padding: 1em 1em;\n}\n.comment-form {\n  display: inline-block;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n@media only screen and (max-width: 900px) {\n  #intro {\n    width: 60%;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -23544,7 +23544,7 @@
 	        _react2.default.createElement(
 	          _reactRouter.Link,
 	          { to: '/' },
-	          'My Photos'
+	          'My Photo Gallery'
 	        )
 	      ),
 	      _react2.default.createElement('hr', null),
@@ -30164,6 +30164,14 @@
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'all-photos' },
+	      _react2.default.createElement(
+	        'p',
+	        { id: 'intro' },
+	        'This site allows users to rate and comment on curated galleries. It shows people a list of photos I liked and provides the user ability to comment and upvote photos.',
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        'To like a picture simply click on the heart icon.  To provide a comment on the picture click on the picture itself or the comment link.  Then type your name and your comment on the comment box and click enter.  To return home click on the top my photos icon.'
+	      ),
 	      this.props.posts.map(function (post, idx) {
 	        return _react2.default.createElement(_Photo2.default, _extends({}, _this.props, { key: idx, idx: idx, post: post }));
 	      })
