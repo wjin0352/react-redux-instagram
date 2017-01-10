@@ -17,7 +17,7 @@ class Footer extends Component {
                 </li>
               </div>
           </div>
-          <p><a href="#top" id="top">Home</a></p>
+          <p><a href="#top" id="top">Top</a></p>
         </div>
 
       </footer>
