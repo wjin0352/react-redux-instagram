@@ -60,11 +60,11 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Single = __webpack_require__(264);
+	var _Single = __webpack_require__(265);
 	
 	var _Single2 = _interopRequireDefault(_Single);
 	
-	var _AllPhotos = __webpack_require__(274);
+	var _AllPhotos = __webpack_require__(275);
 	
 	var _AllPhotos2 = _interopRequireDefault(_AllPhotos);
 	
@@ -72,7 +72,7 @@
 	
 	var _reactRedux = __webpack_require__(192);
 	
-	var _store = __webpack_require__(275);
+	var _store = __webpack_require__(276);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -21510,7 +21510,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  display: block;\n  margin: 50px auto;\n  text-align: center;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 100%;\n  margin: 2em auto;\n  text-align: center;\n}\n/* INTRO paragraph */\n#intro {\n  width: 30%;\n  margin: 0 auto;\n  text-align: center;\n  padding-top: 5em;\n  padding-bottom: 5em;\n  font-family: monospace;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n}\n.grid-photo-wrap {\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  text-align: center;\n}\n.comment-div {\n  font-size: 0.9em;\n  display: inline-block;\n  padding: 1em 1em;\n}\n.comment-form {\n  display: inline-block;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n@media only screen and (max-width: 900px) {\n  #intro {\n    width: 60%;\n  }\n}\n", ""]);
+	exports.push([module.id, "html {\n  font-family: 'Open Sans', sans-serif;\n}\nbody {\n  overflow-y: scroll;\n  background-color: offwhite;\n}\n/* MAIN component */\n#title {\n  color: #f00;\n  display: block;\n  margin: 50px auto;\n  text-align: center;\n}\n#title a {\n  text-decoration: none;\n  font-size: 40px;\n  font-family: 'Euphoria Script', cursive;\n}\n/* ALLPHOTOS */\n.all-photos {\n  max-width: 100%;\n  margin: 2em auto;\n  text-align: center;\n}\n/* INTRO paragraph */\n#intro {\n  width: 30%;\n  margin: 0 auto;\n  text-align: center;\n  padding-top: 5em;\n  padding-bottom: 5em;\n  font-family: monospace;\n}\n/* PHOTO */\n.grid-figure {\n  display: inline-block;\n}\n.grid-photo-wrap {\n  display: inline-block;\n}\n.grid-photo {\n  height: 293px;\n  width: 293px;\n  align-items: stretch;\n  border: 0 solid #000;\n  box-sizing: border-box;\n  display: flex;\n  border: 0.01em solid #808080;\n  border-radius: 10px;\n}\n.speech-bubble {\n  margin: 0.5em;\n}\n/* SINGLE PHOTO */\n.single-photo {\n  text-align: center;\n}\n.comment-div {\n  font-size: 0.9em;\n  display: inline-block;\n  padding: 1em 1em;\n}\n.comment-form {\n  display: inline-block;\n}\nbutton.remove-content {\n  margin-left: 7px;\n}\n/* FOOTER */\nfooter {\n  height: 250px;\n  color: #ccc;\n}\nfooter a {\n  color: #ccc;\n}\n.footer-container {\n  text-align: center;\n}\n.page-foot .btm-bar {\n  background-color: #551a8b;\n}\n.page-foot .btm-bar {\n  padding: 2em 3em;\n}\n.footer-container > li {\n  display: inline-block;\n}\nfooter a:hover {\n  opacity: 0.5;\n}\n.page-foot {\n  background-color: #551a8b;\n  text-align: center;\n}\n.btn-linkedin {\n  color: #fff;\n  background-color: #007bb6;\n  border-color: rgba(0,0,0,0.2);\n  position: relative;\n}\n.foot .fa-linkedin:before {\n  content: \"\\F0E1\";\n  font-size: 1.7em;\n}\n.btn-github {\n  color: #444;\n  background-color: #fff;\n  border-color: rgba(0,0,0,0.2);\n  position: relative;\n  font-size: 12px;\n}\n#github {\n  padding-top: 3px;\n}\n.foot li {\n  list-style: none;\n}\n.foot .fa-github:before {\n  content: \"\\F09B\";\n  font-size: 1.9em;\n}\n#email {\n  font-size: 13px;\n}\na#top {\n  font-size: 12px;\n}\na#top:hover {\n  color: #d9f0ee;\n}\n@media only screen and (max-width: 900px) {\n  #intro {\n    width: 60%;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -23530,14 +23530,38 @@
 	
 	var _reactRouter = __webpack_require__(203);
 	
+	var _Footer = __webpack_require__(264);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Main = _react2.default.createClass({
 	  displayName: 'Main',
+	  componentWillMount: function componentWillMount() {
+	    $(document).ready(function () {
+	      console.log('ready');
+	      // this line just initializes all popover messages, for detail refer to bootstrap popovers
+	      $('[data-toggle="popover"]').popover();
+	      // scrolling fade
+	      $('a[href*="#"]:not([href="#"])').click(function () {
+	        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	          var target = $(this.hash);
+	          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	          if (target.length) {
+	            $('html, body').animate({
+	              scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	          }
+	        }
+	      });
+	    });
+	  },
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      { id: 'top' },
 	      _react2.default.createElement(
 	        'h1',
 	        { id: 'title' },
@@ -23548,7 +23572,8 @@
 	        )
 	      ),
 	      _react2.default.createElement('hr', null),
-	      _react2.default.cloneElement(_extends({}, this.props).children, _extends({}, this.props))
+	      _react2.default.cloneElement(_extends({}, this.props).children, _extends({}, this.props)),
+	      _react2.default.createElement(_Footer2.default, null)
 	    );
 	  }
 	});
@@ -29102,17 +29127,116 @@
 	  value: true
 	});
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'footer',
+	        { className: 'page-foot', id: 'contact' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'btm-bar' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'footer-container' },
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'company-outro' },
+	              'Thanks for visiting!'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { id: 'email' },
+	              'wjin0352@gmail.com'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'foot' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'linkedin', target: '_blank', href: 'https://www.linkedin.com/in/wonyong' },
+	                  'Linkedin'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { id: 'github' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'github', target: '_blank', href: 'https://github.com/wjin0352/' },
+	                  'GitHub'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: '#top', id: 'top' },
+	              'Home'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.Component);
+	
+	;
+	
+	exports.default = Footer;
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Photo = __webpack_require__(265);
+	var _Photo = __webpack_require__(266);
 	
 	var _Photo2 = _interopRequireDefault(_Photo);
 	
-	var _Comments = __webpack_require__(273);
+	var _Comments = __webpack_require__(274);
 	
 	var _Comments2 = _interopRequireDefault(_Comments);
 	
@@ -29144,7 +29268,7 @@
 	exports.default = Single;
 
 /***/ },
-/* 265 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29159,7 +29283,7 @@
 	
 	var _reactRouter = __webpack_require__(203);
 	
-	var _reactAddonsCssTransitionGroup = __webpack_require__(266);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(267);
 	
 	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 	
@@ -29173,7 +29297,6 @@
 	    var idx = _props.idx;
 	    var comments = _props.comments;
 	
-	    console.log(post, '123');
 	    return _react2.default.createElement(
 	      'figure',
 	      { className: 'grid-figure' },
@@ -29193,7 +29316,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'figcaption',
-	        { 'class': 'fig-caption' },
+	        { className: 'fig-caption' },
 	        _react2.default.createElement(
 	          'p',
 	          null,
@@ -29228,13 +29351,13 @@
 	exports.default = Photo;
 
 /***/ },
-/* 266 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(267);
+	module.exports = __webpack_require__(268);
 
 /***/ },
-/* 267 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29254,8 +29377,8 @@
 	
 	var React = __webpack_require__(2);
 	
-	var ReactTransitionGroup = __webpack_require__(268);
-	var ReactCSSTransitionGroupChild = __webpack_require__(270);
+	var ReactTransitionGroup = __webpack_require__(269);
+	var ReactCSSTransitionGroupChild = __webpack_require__(271);
 	
 	function createTransitionTimeoutPropValidator(transitionType) {
 	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -29326,7 +29449,7 @@
 	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -29346,7 +29469,7 @@
 	
 	var React = __webpack_require__(2);
 	var ReactInstanceMap = __webpack_require__(119);
-	var ReactTransitionChildMapping = __webpack_require__(269);
+	var ReactTransitionChildMapping = __webpack_require__(270);
 	
 	var emptyFunction = __webpack_require__(12);
 	
@@ -29578,7 +29701,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -29687,7 +29810,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29706,8 +29829,8 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(35);
 	
-	var CSSCore = __webpack_require__(271);
-	var ReactTransitionEvents = __webpack_require__(272);
+	var CSSCore = __webpack_require__(272);
+	var ReactTransitionEvents = __webpack_require__(273);
 	
 	var onlyChild = __webpack_require__(33);
 	
@@ -29859,7 +29982,7 @@
 	module.exports = ReactCSSTransitionGroupChild;
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29986,7 +30109,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -30064,7 +30187,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30135,7 +30258,7 @@
 	exports.default = Comments;
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30150,7 +30273,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Photo = __webpack_require__(265);
+	var _Photo = __webpack_require__(266);
 	
 	var _Photo2 = _interopRequireDefault(_Photo);
 	
@@ -30182,7 +30305,7 @@
 	exports.default = AllPhotos;
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30194,19 +30317,19 @@
 	
 	var _redux = __webpack_require__(177);
 	
-	var _reactRouterRedux = __webpack_require__(276);
+	var _reactRouterRedux = __webpack_require__(277);
 	
 	var _reactRouter = __webpack_require__(203);
 	
-	var _index = __webpack_require__(281);
+	var _index = __webpack_require__(282);
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _comments = __webpack_require__(284);
+	var _comments = __webpack_require__(285);
 	
 	var _comments2 = _interopRequireDefault(_comments);
 	
-	var _posts = __webpack_require__(285);
+	var _posts = __webpack_require__(286);
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
@@ -30232,7 +30355,7 @@
 	exports.default = store;
 
 /***/ },
-/* 276 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30242,7 +30365,7 @@
 	});
 	exports.routerMiddleware = exports.routerActions = exports.goForward = exports.goBack = exports.go = exports.replace = exports.push = exports.CALL_HISTORY_METHOD = exports.routerReducer = exports.LOCATION_CHANGE = exports.syncHistoryWithStore = undefined;
 	
-	var _reducer = __webpack_require__(277);
+	var _reducer = __webpack_require__(278);
 	
 	Object.defineProperty(exports, 'LOCATION_CHANGE', {
 	  enumerable: true,
@@ -30257,7 +30380,7 @@
 	  }
 	});
 	
-	var _actions = __webpack_require__(278);
+	var _actions = __webpack_require__(279);
 	
 	Object.defineProperty(exports, 'CALL_HISTORY_METHOD', {
 	  enumerable: true,
@@ -30302,11 +30425,11 @@
 	  }
 	});
 	
-	var _sync = __webpack_require__(279);
+	var _sync = __webpack_require__(280);
 	
 	var _sync2 = _interopRequireDefault(_sync);
 	
-	var _middleware = __webpack_require__(280);
+	var _middleware = __webpack_require__(281);
 	
 	var _middleware2 = _interopRequireDefault(_middleware);
 	
@@ -30316,7 +30439,7 @@
 	exports.routerMiddleware = _middleware2['default'];
 
 /***/ },
-/* 277 */
+/* 278 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30360,7 +30483,7 @@
 	}
 
 /***/ },
-/* 278 */
+/* 279 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30402,7 +30525,7 @@
 	var routerActions = exports.routerActions = { push: push, replace: replace, go: go, goBack: goBack, goForward: goForward };
 
 /***/ },
-/* 279 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30415,7 +30538,7 @@
 	
 	exports['default'] = syncHistoryWithStore;
 	
-	var _reducer = __webpack_require__(277);
+	var _reducer = __webpack_require__(278);
 	
 	var defaultSelectLocationState = function defaultSelectLocationState(state) {
 	  return state.routing;
@@ -30556,7 +30679,7 @@
 	}
 
 /***/ },
-/* 280 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30566,7 +30689,7 @@
 	});
 	exports['default'] = routerMiddleware;
 	
-	var _actions = __webpack_require__(278);
+	var _actions = __webpack_require__(279);
 	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
@@ -30594,7 +30717,7 @@
 	}
 
 /***/ },
-/* 281 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30605,13 +30728,13 @@
 	
 	var _redux = __webpack_require__(177);
 	
-	var _reactRouterRedux = __webpack_require__(276);
+	var _reactRouterRedux = __webpack_require__(277);
 	
-	var _posts = __webpack_require__(282);
+	var _posts = __webpack_require__(283);
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _comments = __webpack_require__(283);
+	var _comments = __webpack_require__(284);
 	
 	var _comments2 = _interopRequireDefault(_comments);
 	
@@ -30623,7 +30746,7 @@
 	exports.default = rootReducer;
 
 /***/ },
-/* 282 */
+/* 283 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30656,7 +30779,7 @@
 	exports.default = posts;
 
 /***/ },
-/* 283 */
+/* 284 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30692,7 +30815,6 @@
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 	  var action = arguments[1];
 	
-	  console.log(state, action);
 	  if (typeof action.postId !== 'undefined') {
 	    return _extends({}, state, _defineProperty({}, action.postId, postComments(state[action.postId], action)));
 	  }
@@ -30702,7 +30824,7 @@
 	exports.default = comments;
 
 /***/ },
-/* 284 */
+/* 285 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30889,7 +31011,7 @@
 	exports.default = comments;
 
 /***/ },
-/* 285 */
+/* 286 */
 /***/ function(module, exports) {
 
 	"use strict";

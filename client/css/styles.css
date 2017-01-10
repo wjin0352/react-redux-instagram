@@ -89,6 +89,85 @@ button.remove-content {
   margin-left:7px;
 }
 
+/* FOOTER */
+  footer {
+    height: 250px;
+    color: #CCC;
+  }
+
+  footer a {
+    color: #CCC;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .page-foot .btm-bar {
+    background-color: #551a8b
+  }
+
+  .page-foot .btm-bar  {
+    padding: 2em 3em;
+  }
+
+  .footer-container > li {
+    display: inline-block;
+  }
+
+  footer a:hover {
+    opacity: .5;
+  }
+
+  .page-foot {
+    background-color: #551a8b;
+    text-align: center;
+  }
+
+  .btn-linkedin {
+    color: #fff;
+    background-color: #007bb6;
+    border-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .foot .fa-linkedin:before {
+    content: "\f0e1";
+    font-size: 1.7em;
+  }
+
+  .btn-github {
+    color: #444;
+    background-color: #fff;
+    border-color: rgba(0,0,0,0.2);
+    position: relative;
+    font-size: 12px;
+  }
+
+  #github {
+    padding-top: 3px;
+  }
+
+  .foot li {
+    list-style: none;
+  }
+
+  .foot .fa-github:before {
+    content: "\f09b";
+    font-size: 1.9em;
+  }
+
+  #email {
+    font-size: 13px;
+  }
+
+  a#top {
+    font-size: 12px;
+  }
+
+  a#top:hover {
+    color: #d9f0ee;
+  }
 
 @media only screen and (max-width:900px) {
   #intro {
